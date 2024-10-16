@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ejercicio2</string>
+    <string name="button_name">PULSAR</string>
+    <string name="mensajeError">No escribiste nada!</string>
+</resources>

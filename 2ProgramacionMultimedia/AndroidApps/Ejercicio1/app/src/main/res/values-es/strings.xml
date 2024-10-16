@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ejercicio1</string>
+    <string name="button_name">PULSAR</string>
+    <string name="mensajeError">Incomplete</string>
+</resources>
