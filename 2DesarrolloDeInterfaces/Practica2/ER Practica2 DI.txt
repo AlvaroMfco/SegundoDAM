@@ -1,0 +1,5 @@
+ER Practica2 DI
+
+Articulos(#idArticulo, Descripcion, precio, stock)
+Tickets(#idTicket, fecha, precioTotal)
+Historico(#idHistorico, #idArticuloFK, #idTicketFK, cantidadArticulo)

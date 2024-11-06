@@ -1,7 +1,6 @@
 package es.studium.EjemploJoin; 
 
-public class JoinHilos implements Runnable  
-{ 
+public class JoinHilos implements Runnable{ 
 	private TiradaDados xobj; 
 
 	public JoinHilos(TiradaDados m)  

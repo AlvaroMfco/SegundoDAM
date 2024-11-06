@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Fragmentos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="textoFragment1">Primer Fragment</string>
+    <string name="textoFragment2">Segundo Fragment</string>
+</resources>
