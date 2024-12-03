@@ -4,4 +4,20 @@
   <artifactId>ADT2_Maven_Conexiones</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>ADT2_Maven_Conexiones</name>
+  
+  <dependencies> 
+  <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java --> 
+  <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+    <version>9.1.0</version>
+</dependency>
+
+ </dependencies>
+  
+ <properties> 
+	<maven.compiler.source>22</maven.compiler.source> 
+	<maven.compiler.target>22</maven.compiler.target> 
+ </properties> 
 </project>

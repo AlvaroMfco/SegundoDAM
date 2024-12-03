@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">MyAvatar</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="hintNombre">Introduce tu nombre</string>
+    <string name="sexoHombre">Hombre</string>
+    <string name="sexoMujer">Mujer</string>
+    <string name="eligeNombre">Elige tu nombre</string>
+    <string name="eligeSexo">Elige tu sexo</string>
+    <string name="eligeRaza">Elige tu raza</string>
+    <string name="eligeClase">Elige tu clase</string>
+    <string-array name="raza">
+        <item>Seleccionar</item>
+        <item>Elfo</item>
+        <item>Enano</item>
+        <item>Hobbit</item>
+        <item>Humano</item>
+    </string-array>
+    <string-array name="clase">
+        <item>Seleccionar</item>
+        <item>Arquero</item>
+        <item>Guerrero</item>
+        <item>Mago</item>
+        <item>Herrero</item>
+        <item>Minero</item>
+    </string-array>
+    <string name="cualidades">Cualidades</string>
+    <string name="vida">Vida</string>
+    <string name="magia">Magia</string>
+    <string name="fuerza">Fuerza</string>
+    <string name="velocidad">Velocidad</string>
+    <string name="DlgNombre">DlgNombre</string>
+    <string name="DlgSexo">DlgSexo</string>
+    <string name="DlgRaza">DlgRaza</string>
+    <string name="DlgClase">DlgClase</string>
+    <string name="Fragmento">Fragmento</string>
+    <string name="avisoListener">"Debe implementar OnNuevoDialogoListener"</string>
+    <string name="nombreVacio">El nombre no puede estar vacío</string>
+    <string name="sexoVacio">Debes seleccionar un sexo</string>
+    <string name="razaVacia">Debes seleccionar una raza</string>
+    <string name="claseVacia">Debes seleccionar una clase</string>
+
+
+
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrincipal">#6200EE</color>
+    <color name="colorPrincipalClaro">#BB86FC</color>
+    <color name="colorPrincipalOscuro">#3700B3</color>
+    <color name="colorSeleccionadoCalendario">#03DAC5</color>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="colorPrimarioTexto">#333333</color>
+    <color name="colorSecundarioTexto">#666666</color>
+    <color name="colorTextoBoton">#FFFFFF</color>
+    <color name="colorFondoCalendario">#F3F3F3</color>
+    <color name="colorTextoCalendario">#333333</color>
+</resources>

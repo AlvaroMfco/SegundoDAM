@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MyZodiac</string>
+    <string name="txtMain1">MyZodiac</string>
+    <string name="lblSelecciona">Selecciona tu fecha de nacimiento</string>
+    <string name="prefijoFecha">Tu fecha de nacimiento es: </string>
+    <string name="btnAceptar">Aceptar</string>
+    <string name="acuario">Tu signo es Acuario</string>
+    <string name="piscis">Tu signo es Piscis</string>
+    <string name="aries">Tu signo es Aries</string>
+    <string name="tauro">Tu signo es Tauro</string>
+    <string name="geminis">Tu signo es Géminis</string>
+    <string name="cancer">Tu signo es Cáncer</string>
+    <string name="leo">Tu signo es Leo</string>
+    <string name="virgo">Tu signo es Virgo</string>
+    <string name="libra">Tu signo es Libra</string>
+    <string name="escorpio">Tu signo es Escorpio</string>
+    <string name="sagitario">Tu signo es Sagitario</string>
+    <string name="capricornio">Tu signo es Capricornio</string>
+    <string name="error">Debe seleccionar una fecha</string>
+    <string name="error2">Aún no has nacido :)</string>
+    <string name="tienes">Tienes </string>
+    <string name="anios"> años</string>
+    <string name="desconocido">Desconocido</string>
+    <string name="bebe">Eres un bebé</string>
+    <string name="hintAño">Elegir año</string>
+    <string name="btnIr">Ir</string>
+    <string name="errorFecha">Fecha incorrecta</string>
+    <string name="anioVacio">Debes introducir un año</string>
+
+</resources>

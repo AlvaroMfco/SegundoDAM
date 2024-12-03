@@ -23,6 +23,8 @@ public class PrincipalBola extends JFrame implements KeyListener
 		f.setTitle("Bolas");
 		f.setContentPane(panel); // Ejercicio 11
 		f.setSize(500, 600);
+		f.setResizable(false);
+		f.setLocationRelativeTo(null);
 		f.setVisible(true);
 	}
 	// Ejercicio 11

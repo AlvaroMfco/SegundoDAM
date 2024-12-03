@@ -2,7 +2,8 @@ package es.studium.Tema2;
 
 import java.awt.Color; 
 import java.awt.Graphics; 
-import java.awt.Graphics2D; 
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.util.Random; 
 
 public class Bola 
@@ -19,6 +20,14 @@ public class Bola
 		this.velocidad = v; 
 		this.color = c; 
 	} 
+	
+	public int getX() {
+		return x;
+	}
+	public int getY() {
+		return y;
+	}
+	
 	public int velocidad() 
 	{  
 		// Sleep en milisegundos 
@@ -46,6 +55,11 @@ public class Bola
 			break; 
 		} 
 	} 
+	
+	public Rectangle getCollisionArea() {
+		return new Rectangle(x, y, 50, 50);
+    }
+	
 	public void pinta(Graphics g) 
 	{ 
 		Graphics2D g2d = (Graphics2D)g; 

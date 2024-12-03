@@ -13,10 +13,10 @@ public class TestWorld
 	{
 		try {
 			// System.out.println("=== NOMBRE Y POBLACI�N DE TODOS LOS PAISES===");
-			// mostrarTodosLosPaises();
+//			 mostrarTodosLosPaises();
 
-			// System.out.println("=== NOMBRE Y POBLACI�N DE LOS PAISES QUE EMPIEZAN POR u===");
-			// mostrarPaises('u');
+//			 System.out.println("=== NOMBRE Y POBLACIÓN DE LOS PAISES QUE EMPIEZAN POR u===");
+//			 mostrarPaises('u');
 
 			System.out.println("=== NOMBRE Y TIPO DE DATOS DE LAS COLUMNAS DE LA TABLA COUNTRY===");
 			mostrarDatos();
@@ -24,8 +24,8 @@ public class TestWorld
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
+	
 	private static void mostrarTodosLosPaises() throws SQLException {
 
 		Connection conexion = GestorConexiones.getMySQL_Connection("world");
@@ -38,7 +38,7 @@ public class TestWorld
 
 		while (res.next()) {
 			System.out.println(
-					"El pa�s " + res.getString("Name") + " tiene " + res.getInt("Population") + " habitantes.");
+					"El país " + res.getString("Name") + " tiene " + res.getInt("Population") + " habitantes.");
 		}
 		res.close();
 		st.close();
@@ -48,9 +48,9 @@ public class TestWorld
 	private static void mostrarPaises(char letra) throws SQLException {
 		Connection conexion = GestorConexiones.getMySQL_Connection("world");
 
-		/*Esta sentencia SQL es lo mismo que si hubi�semos puesto:
+		/*Esta sentencia SQL es lo mismo que si hubiésemos puesto:
 		 * String query = "SELECT * FROM COUNTRY WHERE Name LIKE \B%\
-		 * En nuestro ejemplo, la B se la estamos pasando como par�metro"*/
+		 * En nuestro ejemplo, la B se la estamos pasando como parámetro"*/
 
 		// String query = "SELECT * FROM COUNTRY WHERE Name LIKE \"" + String.valueOf(letra) + "%\";";
 		String query = "SELECT * FROM COUNTRY WHERE Name LIKE '" + String.valueOf(letra) + "%';";
@@ -62,7 +62,7 @@ public class TestWorld
 		ResultSet resultado = st.executeQuery(query);
 
 		while (resultado.next()) {
-			System.out.println("El pa�s " + resultado.getString("Name") + " tiene " + resultado.getInt("Population")
+			System.out.println("El país " + resultado.getString("Name") + " tiene " + resultado.getInt("Population")
 			+ " habitantes.");
 		}
 		resultado.close();
@@ -83,7 +83,7 @@ public class TestWorld
 
 		/*N�mero de columnas de la tabla country*/
 		int total = rma.getColumnCount();
-		System.out.println("El n�mero de columnas de la tabla country es: " + total);
+		System.out.println("El número de columnas de la tabla country es: " + total);
 
 		for (int i = 1; i <= total; i++) {
 			/* Devuelve el tipo de dato y el nombre de la columna */
