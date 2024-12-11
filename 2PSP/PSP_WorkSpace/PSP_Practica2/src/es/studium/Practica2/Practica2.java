@@ -25,7 +25,6 @@ public class Practica2 extends JFrame implements MouseListener, ActionListener, 
 	private List<ThreadReproducir> canciones = new ArrayList<ThreadReproducir>();
 
 	public Practica2() {
-		setTitle("Buscar por extensión");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 546, 447);
 		contentPane = new JPanel();
@@ -39,11 +38,11 @@ public class Practica2 extends JFrame implements MouseListener, ActionListener, 
 
 		scrollPane.setViewportView(lista);
 
-		btnReproducir.setBounds(38, 374, 89, 23);
+		btnReproducir.setBounds(38, 374, 108, 23);
 		btnReproducir.addActionListener(this);
 		contentPane.add(btnReproducir);
 
-		btnParar.setBounds(393, 374, 89, 23);
+		btnParar.setBounds(374, 374, 108, 23);
 		btnParar.addActionListener(this);
 		contentPane.add(btnParar);
 		btnReproducir.setEnabled(false);
@@ -52,48 +51,59 @@ public class Practica2 extends JFrame implements MouseListener, ActionListener, 
 		new ThreadBuscador(modeloTabla, this).start();
 	}
 
-	private void reproducirCancion(String archivo) {
-	    ThreadReproducir hiloReproducir = new ThreadReproducir(archivo);
-	    canciones.add(hiloReproducir);
-	    hiloReproducir.start();
+	private void reproducirCancion(String rutaArchivo) {
+		String cancion = rutaArchivo.replaceAll(">> ", "");
+		btnParar.setEnabled(true);
+		modeloTabla.setElementAt(">> " + cancion, lista.getSelectedIndex());
+		ThreadReproducir hiloReproducir = new ThreadReproducir(cancion);
+		canciones.add(hiloReproducir);
+		hiloReproducir.start();
 	}
-	
-	private void pararCancion(String archivo) {
-		for(ThreadReproducir cancion : canciones) {
-			if(cancion.getName().equals(archivo)) {
-				cancion.detenerReproduccion();
+
+	private void pararCancion(String rutaArchivo) {
+		String cancion = rutaArchivo.replaceAll(">> ", "");
+		btnParar.setEnabled(false);
+		for(ThreadReproducir hilo : canciones) {
+			if(hilo.getName().equals(cancion)) {
+				hilo.detenerReproduccion();
+				modeloTabla.setElementAt(cancion, lista.getSelectedIndex());
 			}
 		}
 	}
 
 	public void habilitarBotones() {
-	    btnReproducir.setEnabled(true);
-	    btnParar.setEnabled(true);
-	    lista.addMouseListener(this);
+		btnReproducir.setEnabled(true);
+		lista.addMouseListener(this);
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
+		if(modeloTabla.getElementAt(lista.getSelectedIndex()).startsWith(">> ")) {
+			btnParar.setEnabled(true);
+		}
+		else btnParar.setEnabled(false);
+
 		if (e.getClickCount() == 2) {
-			String archivo = lista.getSelectedValue();
-			if (archivo != null) {
-				reproducirCancion(archivo);
+			String rutaArchivo = lista.getSelectedValue();
+			if (rutaArchivo != null) {
+				reproducirCancion(rutaArchivo);
 			}
 		}
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-	    String archivo = lista.getSelectedValue();
-	    if (archivo != null) {
-	        if (e.getSource() == btnReproducir) {
-	            // Llamar a reproducirCancion para iniciar la reproducción en un hilo
-	            reproducirCancion(archivo);
-	        } else if (e.getSource() == btnParar) {
-	            // Llamar a detenerReproduccion() para detener la reproducción
-	            pararCancion(archivo);
-	        }
-	    }
+		String rutaArchivo = lista.getSelectedValue();
+		if (rutaArchivo != null) {
+			if (e.getSource() == btnReproducir) {
+				// Llamar a reproducirCancion para iniciar la reproducción en un hilo
+				reproducirCancion(rutaArchivo);
+			} 
+			else if (e.getSource() == btnParar) {
+				// Llamar a detenerReproduccion() para detener la reproducción
+				pararCancion(rutaArchivo);
+			}
+		}
 	}
 
 	@Override

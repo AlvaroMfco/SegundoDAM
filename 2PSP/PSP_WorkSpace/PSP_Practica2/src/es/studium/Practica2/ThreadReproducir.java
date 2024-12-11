@@ -6,22 +6,22 @@ import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 
 public class ThreadReproducir extends Thread {
-	private String archivo;
+	private String rutaArchivo;
 	Player player;
 
-	public ThreadReproducir(String archivo) {
-		this.archivo = archivo;
+	public ThreadReproducir(String ruta) {
+		this.rutaArchivo = ruta;
 	}
 
 	@Override
 	public void run() {
-		setName(archivo);
+		setName(rutaArchivo);
 		reproducirMp3();
 	}
 
 	private void reproducirMp3() {
 		try {
-			FileInputStream input = new FileInputStream(archivo);
+			FileInputStream input = new FileInputStream(rutaArchivo);
 			player = new Player(input);
 			player.play();
 			detenerReproduccion();

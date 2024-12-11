@@ -8,7 +8,7 @@ public class Principal {
 			public void run() {
 				try {
 					Practica2 frame = new Practica2();
-					frame.setTitle("Buscar por extensión");
+					frame.setTitle("Mi Música");
 					frame.setResizable(false);
 					frame.setVisible(true);
 					frame.setLocationRelativeTo(null);
