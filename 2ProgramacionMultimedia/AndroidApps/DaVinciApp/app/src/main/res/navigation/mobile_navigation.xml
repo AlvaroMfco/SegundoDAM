@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_pintor"
+        android:name="es.studium.davinciapp.ui.pintor.PintorFragment"
+        android:label="@string/menu_pintor"
+        tools:layout="@layout/fragment_pintor" />
+
+    <fragment
+        android:id="@+id/nav_escultor"
+        android:name="es.studium.davinciapp.ui.escultor.EscultorFragment"
+        android:label="@string/menu_escultor"
+        tools:layout="@layout/fragment_escultor" />
+
+    <fragment
+        android:id="@+id/nav_cientifico"
+        android:name="es.studium.davinciapp.ui.cientifico.CientificoFragment"
+        android:label="@string/menu_cientifico"
+        tools:layout="@layout/fragment_cientifico" />
+
+    <fragment
+        android:id="@+id/nav_inventor"
+        android:name="es.studium.davinciapp.ui.inventor.InventorFragment"
+        android:label="@string/menu_inventor"
+        tools:layout="@layout/fragment_inventor" />
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="es.studium.davinciapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+</navigation>

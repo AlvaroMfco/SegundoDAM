@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppMenus</string>
+    <string name="menuFile">Archivo</string>
+    <string name="menuOpen">Abrir</string>
+    <string name="menuSave">Guardar</string>
+    <string name="menuSettings">Configuración...</string>
+    <string name="mensajeOpen">Elegiste Abrir...</string>
+    <string name="mensajeSave">Elegiste Guardar...</string>
+    <string name="mensajeSettings">Elegiste Configuración...</string>
+</resources>

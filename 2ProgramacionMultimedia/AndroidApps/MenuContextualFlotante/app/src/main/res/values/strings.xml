@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MenuContextualFlotante</string>
+    <string name="menuFile">Archivo</string>
+    <string name="menuSettings">Configuración</string>
+    <string name="mensajeFile">Elegiste Archivo…</string>
+    <string name="mensajeSettings">Elegiste Configuración</string>
+</resources>
